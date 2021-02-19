@@ -83,6 +83,10 @@ namespace Övning1
                 {
                     CopyArrayToAnother();
                 }
+                else if (userCommandInput == "1.18")
+                {
+                    CountDuplicateInArray();
+                }
                 else if (userCommandInput == "quit")
                 {
                     break;
@@ -353,6 +357,32 @@ namespace Övning1
             Console.Write("The elements  copied to your array are:\n");
             Console.WriteLine(string.Join(" ", integer2));
 
+        }
+        // Uppgift 1.18
+        static void CountDuplicateInArray()
+        {
+            int dupliCount = 0;
+            Console.Write("How many elements do you want to store in your array?\nYour number of elements in the array are: ");
+            int storage = Convert.ToInt32(Console.ReadLine());
+            string[] integer = new string[storage];
+            Console.WriteLine($"Input {storage} elemtens in the array:");
+            for (int i = 0; i < storage; i++)
+            {
+                Console.Write($"element - {i}: ");
+                integer[i] = Console.ReadLine();
+            }
+            //
+            for (int i = 0; i < storage; i++)
+            {
+                for (int j = i + 1; j < storage; j++)
+                {
+                    if (integer[i] == integer[j])
+                    {
+                        dupliCount += 1;
+                    }
+                }
+            }
+            Console.WriteLine(dupliCount);
         }
     }
 }
