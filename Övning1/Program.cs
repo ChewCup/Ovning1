@@ -75,11 +75,14 @@ namespace Övning1
                 {
                     ReverseArrayElements();
                 }
+                else if (userCommandInput == "1.16")
+                {
+                    SumOfAllElementsInArray();
+                }
                 else if (userCommandInput == "quit")
                 {
                     break;
                 }
-
             }
         }
         //////// Methods ////////
@@ -273,7 +276,7 @@ namespace Övning1
         // Uppgift 1.14
         static void SaveIntegerInArray()
         {
-            Console.Write("How many elements do you want to store in your array?\nYour number of elements in the array: ");
+            Console.Write("How many elements do you want to store in your array?\nYour number of elements in the array are: ");
             int storage = Convert.ToInt32(Console.ReadLine());
             int[] integer = new int[storage];
             for (int i = 0; i < storage; i++)
@@ -284,9 +287,10 @@ namespace Övning1
             Console.Write("Elements in your array are: ");
             Console.WriteLine(string.Join(" ", integer));
         }
+        // Uppgift 1.15
         static void ReverseArrayElements()
         {
-            Console.Write("How many elements do you want to store in your array?\nYour number of elements in the array: ");
+            Console.Write("How many elements do you want to store in your array?\nYour number of elements in the array are: ");
             int storage = Convert.ToInt32(Console.ReadLine());
             int[] integer = new int[storage];
             for (int i = 0; i < storage; i++)
@@ -305,6 +309,22 @@ namespace Övning1
                 Console.Write(item + " ");
             }
             Console.WriteLine();
+        }
+        // Uppgift 1.16
+        static void SumOfAllElementsInArray()
+        {
+            int arraySum = 0;
+            Console.Write("How many elements do you want to store in your array?\nYour number of elements in the array are: ");
+            int storage = Convert.ToInt32(Console.ReadLine());
+            int[] integer = new int[storage];
+            Console.WriteLine($"Input {storage} elemtens in the array:");
+            for (int i = 0; i < storage; i++)
+            {
+                Console.Write($"element - {i}: ");
+                integer[i] = Convert.ToInt32(Console.ReadLine());
+                arraySum += integer[i];
+            }
+            Console.WriteLine($"Sum of all elements stored in the array is: {arraySum}");
         }
     }
 }
