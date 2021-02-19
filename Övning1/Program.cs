@@ -79,6 +79,10 @@ namespace Övning1
                 {
                     SumOfAllElementsInArray();
                 }
+                else if (userCommandInput == "1.17")
+                {
+                    CopyArrayToAnother();
+                }
                 else if (userCommandInput == "quit")
                 {
                     break;
@@ -325,6 +329,30 @@ namespace Övning1
                 arraySum += integer[i];
             }
             Console.WriteLine($"Sum of all elements stored in the array is: {arraySum}");
+        }
+        // Uppgift 1.17
+        static void CopyArrayToAnother()
+        {
+            Console.Write("How many elements do you want to store in your array?\nYour number of elements in the array are: ");
+            int storage = Convert.ToInt32(Console.ReadLine());
+            int[] integer1 = new int[storage];
+            Console.WriteLine($"Input {storage} elemtens in the array:");
+            for (int i = 0; i < storage; i++)
+            {
+                Console.Write($"element - {i}: ");
+                integer1[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.Write("Elements in your array are:\n");
+            Console.WriteLine(string.Join(" ", integer1));
+            // copy to another array
+            int[] integer2 = new int[storage];
+            for (int i = 0; i < storage; i++)
+            {
+                integer2[i] = integer1[i];
+            }
+            Console.Write("The elements  copied to your array are:\n");
+            Console.WriteLine(string.Join(" ", integer2));
+
         }
     }
 }
