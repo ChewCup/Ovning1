@@ -71,6 +71,10 @@ namespace Övning1
                 {
                     SaveIntegerInArray();
                 }
+                else if (userCommandInput == "1.15")
+                {
+                    ReverseArrayElements();
+                }
                 else if (userCommandInput == "quit")
                 {
                     break;
@@ -269,7 +273,7 @@ namespace Övning1
         // Uppgift 1.14
         static void SaveIntegerInArray()
         {
-            Console.Write("How many elements do you want in your array?\nYour input: ");
+            Console.Write("How many elements do you want to store in your array?\nYour number of elements in the array: ");
             int storage = Convert.ToInt32(Console.ReadLine());
             int[] integer = new int[storage];
             for (int i = 0; i < storage; i++)
@@ -279,6 +283,28 @@ namespace Övning1
             }
             Console.Write("Elements in your array are: ");
             Console.WriteLine(string.Join(" ", integer));
+        }
+        static void ReverseArrayElements()
+        {
+            Console.Write("How many elements do you want to store in your array?\nYour number of elements in the array: ");
+            int storage = Convert.ToInt32(Console.ReadLine());
+            int[] integer = new int[storage];
+            for (int i = 0; i < storage; i++)
+            {
+                Console.Write($"element - {i}: ");
+                integer[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.Write("Elements in your array are:\n");
+            Console.WriteLine(string.Join(" ", integer));
+            
+            // reverse the array
+            Console.Write("The reversed array order are:\n");
+            Array.Reverse(integer);
+            foreach (int item in integer)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine();
         }
     }
 }
