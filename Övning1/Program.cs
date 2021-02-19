@@ -1,0 +1,235 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Övning1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            while (true)
+            {
+                string userCommandInput;
+                Console.Write("Type in the exercise task (1.1 - 1.25): ");
+                userCommandInput = Console.ReadLine();
+                if (userCommandInput == "1.1")
+                {
+                    IsNumberEqual();
+                }
+                else if (userCommandInput == "1.2")
+                {
+                    IsNumberEvenOrOdd();
+                }
+                else if (userCommandInput == "1.3")
+                {
+                    IsNumberPosOrNeg();
+                }
+                else if (userCommandInput == "1.4")
+                {
+                    CheckLeapYear();
+                }
+                else if (userCommandInput == "1.5")
+                {
+                    ElectionVoting();
+                }
+                
+                else if (userCommandInput == "1.6")
+                {
+                    IntegerValue();
+                }
+                else if (userCommandInput == "1.7")
+                {
+                    PersonHight();
+                }
+                else if (userCommandInput == "1.8")
+                {
+                    PrintTenNaturalNumbers();
+                }
+                else if (userCommandInput == "1.9")
+                {
+                    TheSumOfTheTenNaturalNumers();
+                }
+                else if (userCommandInput == "1.10")
+                {
+                    SumOfInputNaturalNumbers();
+                }
+                else if (userCommandInput == "1.11")
+                {
+                    SumOfUserIntegerInput();
+                }
+                else if (userCommandInput == "quit")
+                {
+                    break;
+                }
+
+            }
+        }
+        //////// Methods ////////
+        // Uppgift 1.1
+        static void IsNumberEqual()
+        {
+            int int1, int2;
+            Console.WriteLine("Compare two integer if it equal or not.");
+            Console.Write("Number1: ");
+            int1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Number2: ");
+            int2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"First number is: {int1} \nSecond number is: {int2}");
+            if (int1 == int2)
+                Console.WriteLine("{0} and {1} are equal.\n", int1, int2);
+            else
+                Console.WriteLine("{0} and {1} are not equal.\n", int1, int2);
+        }
+        // Uppgift 1.2
+        static void IsNumberEvenOrOdd()
+        {
+            int intToCheck;
+            Console.Write($"Check if the number is even or odd: ");
+            intToCheck = Convert.ToInt32(Console.ReadLine());
+            if (intToCheck % 2 == 0)
+                Console.WriteLine($"{intToCheck} is an even integer.");
+            else
+            {
+                Console.WriteLine($"{intToCheck} is an odd integer.");
+            }
+        }
+        // Uppgift 1.3
+        static void IsNumberPosOrNeg()
+        {
+            Console.Write("Check if the number is positive or negative: ");
+            int int1 = Convert.ToInt32(Console.ReadLine());
+            if (int1 > 0)
+            {
+                Console.WriteLine($"{int1} is a positive integer!");
+            }
+            else if (int1 == 0)
+            {
+                Console.WriteLine($"{int1} is a neutral number!");
+            }
+            else
+            {
+                Console.WriteLine($"{int1} is an negative integer!");
+            }
+        }
+        // Uppgift 1.4
+        static void CheckLeapYear()
+        {
+            Console.Write("Check if the year is leap year or not: ");
+            int year = int.Parse(Console.ReadLine());
+            if (year % 400 == 0)
+            {
+                Console.WriteLine($"{year} is leap year!");
+            }
+            else if (year % 100 == 0)
+            {
+                Console.WriteLine($"{year} is not leap year!");
+            }
+            else if (year % 4 == 0)
+            {
+                Console.WriteLine($"{year} is leap year!");
+            }
+            else
+            {
+                Console.WriteLine($"{year} is not leap year!");
+            }
+        }
+        // Uppgift 1.5
+        static void ElectionVoting()
+        {
+            Console.Write("How old are you?: ");
+            int age = Convert.ToInt32(Console.ReadLine());
+            if (age < 18)
+            {
+                Console.WriteLine("You are not eligible for casting your vote.");
+            }
+            else
+            {
+                Console.WriteLine("You are eligible for casting your vote.");
+            }
+        }
+        // Uppgift 1.6
+        static void IntegerValue()
+        {
+            Console.Write("Enter a number: ");
+            double m = Convert.ToDouble(Console.ReadLine());
+            if (m > 0)
+            {
+                Console.WriteLine("The value of n = 1");
+            }
+            else if (m == 0)
+            {
+                Console.WriteLine("The value of n = 0");
+            }
+            else
+            {
+                Console.WriteLine("The value of n = -1");
+            }
+        }
+        // Uppgift 1.7
+        static void PersonHight()
+        {
+            Console.Write("Whats your hight in centimeter (cm)? ");
+            double userHight = Convert.ToDouble(Console.ReadLine());
+            if (userHight <= 135)
+            {
+                Console.WriteLine("You are short.");
+            }
+            else
+            {
+                Console.WriteLine("You are a tall.");
+            }
+        }
+        // Uppgift 1.8
+        static void PrintTenNaturalNumbers()
+        {
+            for (int i = 1; i < 11; i++)
+            {
+                Console.Write($"{i} ");
+            }
+            Console.WriteLine();
+        }
+        // Uppgift 1.9
+        static void TheSumOfTheTenNaturalNumers()
+        {
+            int sum = 0;
+            Console.WriteLine("The first 10 natural numbers:");
+            for (int i = 1; i < 11; i++)
+            {
+                Console.Write($"{i} ");
+                sum += i;
+            }
+            Console.WriteLine($"\nThe sum is: {sum}");
+        }
+        // Uppgift 1.10
+        static void SumOfInputNaturalNumbers()
+        {
+            int sum = 0;
+            Console.Write("Type in a number: ");
+            int userInt = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= userInt; i++)
+            {
+                Console.Write($"{i} ");
+                sum += i;
+            }
+            Console.WriteLine($"\nThe sum is: {sum}");
+        }
+        // Uppgift 1.11
+        static void SumOfUserIntegerInput()
+        {
+            int[] integer = new int[10];
+            double theSumOfTheInput = 0;
+            Console.WriteLine("Enter 10 integers.");
+            for (int i = 0; i <= 9; i++)
+            {
+                Console.Write($"Enter number{i+1}: ");
+                integer[i] = Convert.ToInt32(Console.ReadLine());
+                theSumOfTheInput += integer[i];
+            }
+            double average = theSumOfTheInput / integer.Length;
+            Console.WriteLine($"The sum of 10 numbers: {theSumOfTheInput}\nThe average: {average}");
+        }
+    }
+}
