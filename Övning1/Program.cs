@@ -35,7 +35,6 @@ namespace Övning1
                 {
                     ElectionVoting();
                 }
-                
                 else if (userCommandInput == "1.6")
                 {
                     IntegerValue();
@@ -59,6 +58,18 @@ namespace Övning1
                 else if (userCommandInput == "1.11")
                 {
                     SumOfUserIntegerInput();
+                }
+                else if (userCommandInput == "1.12")
+                {
+                    CubeOfUserInput();
+                }
+                else if (userCommandInput == "1.13")
+                {
+                    MultiplyAGivenInteger();
+                }
+                else if (userCommandInput == "1.14")
+                {
+                    SaveIntegerInArray();
                 }
                 else if (userCommandInput == "quit")
                 {
@@ -230,6 +241,44 @@ namespace Övning1
             }
             double average = theSumOfTheInput / integer.Length;
             Console.WriteLine($"The sum of 10 numbers: {theSumOfTheInput}\nThe average: {average}");
+        }
+        // Uppgift 1.12
+        static void CubeOfUserInput()
+        {
+            Console.Write("The Cube of an integer up to the user integer input.\nYour input: ");
+            int userInput = Convert.ToInt32(Console.ReadLine());
+            double cubeOfIntegers = 0;
+            for (int i = 1; i < userInput+1; i++)
+            {
+                cubeOfIntegers = Math.Pow(i, 3);
+                Console.WriteLine($"Integer: {i}, cube of {i} is: {cubeOfIntegers}");
+            }
+
+        }
+        // Uppgift 1.13
+        static void MultiplyAGivenInteger()
+        {
+            Console.Write("Enter an integer to multiply.\nYour integer: ");
+            int userInt = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= 10; i++)
+            {
+                int multi = userInt * i;
+                Console.WriteLine($"{userInt} x {i} = {multi}");
+            }
+        }
+        // Uppgift 1.14
+        static void SaveIntegerInArray()
+        {
+            Console.Write("How many elements do you want in your array?\nYour input: ");
+            int storage = Convert.ToInt32(Console.ReadLine());
+            int[] integer = new int[storage];
+            for (int i = 0; i < storage; i++)
+            {
+                Console.Write($"element - {i}: ");
+                integer[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.Write("Elements in your array are: ");
+            Console.WriteLine(string.Join(" ", integer));
         }
     }
 }
