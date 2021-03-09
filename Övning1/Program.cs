@@ -87,6 +87,10 @@ namespace Övning1
                 {
                     CountDuplicateInArray();
                 }
+                else if (userCommandInput == "1.19")
+                {
+
+                }
                 else if (userCommandInput == "quit")
                 {
                     break;
