@@ -88,7 +88,7 @@ namespace Övning1
                     CountDuplicateInArray();
                 }else if (userCommandInput == "1.20")
                 {
-                    // testing2
+                    // testing2testing2testing2testing2testing2testing2
                 }
                 else if (userCommandInput == "1.19")
                 {
