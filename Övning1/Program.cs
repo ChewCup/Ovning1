@@ -86,13 +86,14 @@ namespace Övning1
                 else if (userCommandInput == "1.18")
                 {
                     CountDuplicateInArray();
+
                 }else if (userCommandInput == "1.20")
                 {
                     // testing2testing2testing2testing2testing2testing2
                 }
                 else if (userCommandInput == "1.19")
                 {
-                    // hej fdsfsdf
+                    // hejhejhejhejhejhej
                 }
                 else if (userCommandInput == "quit")
                 {
