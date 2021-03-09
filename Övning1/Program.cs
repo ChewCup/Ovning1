@@ -92,7 +92,7 @@ namespace Övning1
                 }
                 else if (userCommandInput == "1.19")
                 {
-                    // hej fdsfsdf
+                    // hejhejhejhejhejhej
                 }
                 else if (userCommandInput == "quit")
                 {
