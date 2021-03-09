@@ -94,8 +94,7 @@ namespace Övning1
                 else if (userCommandInput == "1.20")
                 {
                     // testing2
-                }
-                //fdslfns
+                }                
                 else if (userCommandInput == "quit")
                 {
                     break;
